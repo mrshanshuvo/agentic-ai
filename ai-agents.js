@@ -11,10 +11,10 @@ async function main() {
   const completion = await openai.chat.completions.create({
     model: "arcee-ai/trinity-large-preview:free",
     messages: [
-      { role: "user", content: "Say this is a test" }
+      { role: "user", content: "What is agentic AI?" }
     ],
   })
 
-  console.log(completion.choices[0].message)
+  console.log(completion.choices[0].message.content)
 }
 main();
