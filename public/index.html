@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Task Agent | Achieve Your Goals</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-hover: #4f46e5;
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --radius: 12px;
+            --glass: rgba(30, 41, 59, 0.7);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 2rem 1rem;
+            line-height: 1.5;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+        }
+
+        input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text);
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+        }
+
+        button {
+            width: 100%;
+            padding: 0.875rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        button:hover {
+            background: var(--primary-hover);
+            transform: translateY(-1px);
+        }
+
+        button:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        /* Result Section */
+        #result {
+            display: none;
+        }
+
+        .plan-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .confidence-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: rgba(34, 197, 94, 0.15);
+            color: #4ade80;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .daily-task {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .daily-task:hover {
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .day-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .task-focus {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .task-list {
+            list-style: none;
+        }
+
+        .task-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+        }
+
+        .task-item::before {
+            content: "→";
+            color: var(--primary);
+        }
+
+        .loading-spinner {
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 0.6s linear infinite;
+            display: none;
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 640px) {
+            header h1 { font-size: 2rem; }
+            .card { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Task Agent</h1>
+            <p>Transform your goals into actionable plans.</p>
+        </header>
+
+        <section class="card">
+            <div class="form-group">
+                <label for="goalText">What do you want to achieve?</label>
+                <input type="text" id="goalText" placeholder="e.g. Learn Python, Run a Marathon, Build an App..." required>
+            </div>
+            <div class="form-group">
+                <label for="durationDays">In how many days?</label>
+                <input type="number" id="durationDays" value="7" min="1" max="90">
+            </div>
+            <button id="analyzeBtn">
+                <span class="loading-spinner" id="spinner"></span>
+                <span id="btnText">Generate Plan</span>
+            </button>
+        </section>
+
+        <section id="result" class="card">
+            <div class="plan-header">
+                <div id="confidence" class="confidence-badge">High Confidence</div>
+                <h2 id="planGoal">Learning Python</h2>
+                <p id="planSummary" style="color: var(--text-muted); margin-top: 0.5rem;"></p>
+            </div>
+            <div id="tasksContainer">
+                <!-- Daily tasks will be injected here -->
+            </div>
+            <div id="recContainer" style="margin-top: 2rem; padding: 1rem; background: rgba(99, 102, 241, 0.1); border-radius: 8px;">
+                <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Coach's Advice</h4>
+                <p id="recommendation" style="font-size: 0.95rem;"></p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const analyzeBtn = document.getElementById('analyzeBtn');
+        const spinner = document.getElementById('spinner');
+        const btnText = document.getElementById('btnText');
+        const resultSection = document.getElementById('result');
+
+        analyzeBtn.addEventListener('click', async () => {
+            const goalText = document.getElementById('goalText').value;
+            const durationDays = document.getElementById('durationDays').value;
+
+            if (!goalText) return alert('Please enter a goal!');
+
+            // UI State: Loading
+            analyzeBtn.disabled = true;
+            spinner.style.display = 'block';
+            btnText.innerText = 'Analyzing...';
+            resultSection.style.display = 'none';
+
+            try {
+                const response = await fetch('/api/analyze-goal', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ goalText, durationDays })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    renderPlan(data);
+                } else {
+                    alert('Error: ' + data.error);
+                }
+            } catch (err) {
+                console.error(err);
+                alert('Connection failed. Is the server running?');
+            } finally {
+                analyzeBtn.disabled = false;
+                spinner.style.display = 'none';
+                btnText.innerText = 'Generate Plan';
+            }
+        });
+
+        function renderPlan(data) {
+            document.getElementById('planGoal').innerText = data.goal_summary;
+            document.getElementById('planSummary').innerText = `Duration: ${data.daily_tasks.length} Days`;
+            document.getElementById('confidence').innerText = `Confidence: ${(data.confidence_score * 100).toFixed(0)}%`;
+            document.getElementById('recommendation').innerText = data.final_recommendation;
+
+            const container = document.getElementById('tasksContainer');
+            container.innerHTML = '';
+
+            data.daily_tasks.forEach(task => {
+                const taskEl = document.createElement('div');
+                taskEl.className = 'daily-task';
+                taskEl.innerHTML = `
+                    <div class="day-label">Day ${task.day}</div>
+                    <div class="task-focus">${task.focus}</div>
+                    <ul class="task-list">
+                        ${task.tasks.map(t => `<li class="task-item">${t}</li>`).join('')}
+                    </ul>
+                    <div style="margin-top: 1rem; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">
+                        ⚡ Estimated time: ${task.estimated_time_hours} hours
+                    </div>
+                `;
+                container.appendChild(taskEl);
+            });
+
+            resultSection.style.display = 'block';
+            resultSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,399 @@
+[
+  {
+    "text": "Learn django REST API",
+    "durationDays": "7",
+    "plan": {
+      "goal_summary": "Learn Django REST API in 7 days",
+      "is_achievable": true,
+      "confidence_score": 0.7,
+      "required_resources": [
+        "Python knowledge",
+        "Django basics",
+        "Internet connection",
+        "Text editor"
+      ],
+      "daily_tasks": [
+        {
+          "day": 1,
+          "focus": "Django REST Framework basics",
+          "tasks": [
+            "Install Django REST Framework",
+            "Set up a basic Django project",
+            "Create a simple API view"
+          ],
+          "estimated_time_hours": 2.5
+        },
+        {
+          "day": 2,
+          "focus": "Serializers",
+          "tasks": [
+            "Learn about serializers",
+            "Create serializers for models",
+            "Test serializers with sample data"
+          ],
+          "estimated_time_hours": 2.5
+        },
+        {
+          "day": 3,
+          "focus": "Views and URLs",
+          "tasks": [
+            "Create API views using class-based views",
+            "Set up URL routing for API endpoints",
+            "Test API endpoints"
+          ],
+          "estimated_time_hours": 2.5
+        },
+        {
+          "day": 4,
+          "focus": "Authentication and permissions",
+          "tasks": [
+            "Implement basic authentication",
+            "Set up permissions for API endpoints",
+            "Test authentication and permissions"
+          ],
+          "estimated_time_hours": 2.5
+        },
+        {
+          "day": 5,
+          "focus": "API documentation",
+          "tasks": [
+            "Generate API documentation using DRF tools",
+            "Create a browsable API",
+            "Test documentation"
+          ],
+          "estimated_time_hours": 2.5
+        },
+        {
+          "day": 6,
+          "focus": "Testing and debugging",
+          "tasks": [
+            "Write unit tests for API views",
+            "Debug common issues",
+            "Optimize API performance"
+          ],
+          "estimated_time_hours": 2.5
+        },
+        {
+          "day": 7,
+          "focus": "Project deployment",
+          "tasks": [
+            "Deploy API to a server",
+            "Set up production environment",
+            "Test deployed API"
+          ],
+          "estimated_time_hours": 2.5
+        }
+      ],
+      "potential_obstacles": [
+        "Lack of prior Django knowledge",
+        "Technical issues during setup",
+        "Time management"
+      ],
+      "success_metrics": [
+        "Complete all daily tasks",
+        "Build a functional API",
+        "Deploy API successfully"
+      ],
+      "final_recommendation": "Focus on understanding core concepts rather than rushing through. Spend extra time on areas you find challenging and don't hesitate to seek help from online communities."
+    },
+    "status": "active",
+    "id": "1776427909393",
+    "createdAt": "2026-04-17T12:11:49.393Z"
+  },
+  {
+    "text": "run marathon",
+    "durationDays": "7",
+    "plan": {
+      "goal_summary": "Complete a marathon in 7 days",
+      "is_achievable": false,
+      "confidence_score": 0.1,
+      "required_resources": [
+        "Running shoes",
+        "Training plan",
+        "Hydration pack"
+      ],
+      "daily_tasks": [
+        {
+          "day": 1,
+          "focus": "Assess current fitness level",
+          "tasks": [
+            "Run 1 mile to gauge fitness",
+            "Research marathon training basics"
+          ],
+          "estimated_time_hours": 2
+        },
+        {
+          "day": 2,
+          "focus": "Injury prevention and preparation",
+          "tasks": [
+            "Stretch and foam roll",
+            "Visit a running store for proper shoe fitting"
+          ],
+          "estimated_time_hours": 1.5
+        },
+        {
+          "day": 3,
+          "focus": "Short runs and recovery",
+          "tasks": [
+            "Run 2 miles at an easy pace",
+            "Rest and hydrate"
+          ],
+          "estimated_time_hours": 1
+        },
+        {
+          "day": 4,
+          "focus": "Mental preparation",
+          "tasks": [
+            "Visualize crossing the finish line",
+            "Watch marathon documentaries"
+          ],
+          "estimated_time_hours": 1
+        },
+        {
+          "day": 5,
+          "focus": "Nutrition and hydration",
+          "tasks": [
+            "Research marathon nutrition",
+            "Practice carb-loading"
+          ],
+          "estimated_time_hours": 1.5
+        },
+        {
+          "day": 6,
+          "focus": "Final preparations",
+          "tasks": [
+            "Lay out marathon gear",
+            "Plan transportation to the start line"
+          ],
+          "estimated_time_hours": 1
+        },
+        {
+          "day": 7,
+          "focus": "Marathon day",
+          "tasks": [
+            "Run the marathon",
+            "Celebrate your effort"
+          ],
+          "estimated_time_hours": 6
+        }
+      ],
+      "potential_obstacles": [
+        "Injury risk",
+        "Lack of training",
+        "Mental fatigue"
+      ],
+      "success_metrics": [
+        "Finish the marathon",
+        "Avoid injury",
+        "Enjoy the experience"
+      ],
+      "final_recommendation": "Running a marathon in 7 days is not realistic and poses significant health risks. Instead, consider setting a long-term goal to train for a marathon over several months. Focus on building a solid foundation, gradually increasing mileage, and prioritizing injury prevention. Celebrate your progress along the way and aim to complete a marathon when you're fully prepared."
+    },
+    "status": "active",
+    "id": "1776428153993",
+    "createdAt": "2026-04-17T12:15:53.993Z"
+  },
+  {
+    "text": "Nextjs",
+    "durationDays": "7",
+    "plan": {
+      "goal_summary": "Learn Next.js fundamentals in 7 days",
+      "is_achievable": true,
+      "confidence_score": 0.8,
+      "required_resources": [
+        "Computer",
+        "Internet connection",
+        "Next.js documentation",
+        "Code editor"
+      ],
+      "daily_tasks": [
+        {
+          "day": 1,
+          "focus": "Introduction to Next.js",
+          "tasks": [
+            "Install Node.js and create a new Next.js project",
+            "Explore the project structure",
+            "Run the development server"
+          ],
+          "estimated_time_hours": 2
+        },
+        {
+          "day": 2,
+          "focus": "Pages and Routing",
+          "tasks": [
+            "Create multiple pages",
+            "Understand file-based routing",
+            "Implement dynamic routes"
+          ],
+          "estimated_time_hours": 2.5
+        },
+        {
+          "day": 3,
+          "focus": "Components and Styling",
+          "tasks": [
+            "Create reusable components",
+            "Apply CSS modules and Tailwind CSS",
+            "Implement responsive design"
+          ],
+          "estimated_time_hours": 3
+        },
+        {
+          "day": 4,
+          "focus": "API Routes",
+          "tasks": [
+            "Create API endpoints",
+            "Handle GET and POST requests",
+            "Test API routes"
+          ],
+          "estimated_time_hours": 2.5
+        },
+        {
+          "day": 5,
+          "focus": "Data Fetching",
+          "tasks": [
+            "Use getStaticProps and getServerSideProps",
+            "Fetch data from external APIs",
+            "Implement client-side data fetching"
+          ],
+          "estimated_time_hours": 3
+        },
+        {
+          "day": 6,
+          "focus": "Deployment and Optimization",
+          "tasks": [
+            "Deploy to Vercel",
+            "Analyze bundle size",
+            "Implement performance optimizations"
+          ],
+          "estimated_time_hours": 2
+        },
+        {
+          "day": 7,
+          "focus": "Project Integration",
+          "tasks": [
+            "Build a small project using Next.js",
+            "Integrate all learned concepts",
+            "Review and refactor code"
+          ],
+          "estimated_time_hours": 3
+        }
+      ],
+      "potential_obstacles": [
+        "Limited time per day",
+        "Complex concepts",
+        "Technical issues"
+      ],
+      "success_metrics": [
+        "Completed all daily tasks",
+        "Built a functional Next.js project",
+        "Understood core Next.js concepts"
+      ],
+      "final_recommendation": "Stay consistent with daily tasks, take breaks to avoid burnout, and seek help from the Next.js community if needed."
+    },
+    "status": "active",
+    "id": "1776429390659",
+    "createdAt": "2026-04-17T12:36:30.659Z"
+  },
+  {
+    "text": "next js",
+    "durationDays": "7",
+    "plan": {
+      "goal_summary": "Learn Next.js framework in 7 days",
+      "is_achievable": false,
+      "confidence_score": 0.3,
+      "required_resources": [
+        "Next.js documentation",
+        "Code editor",
+        "Internet connection",
+        "Project ideas"
+      ],
+      "daily_tasks": [
+        {
+          "day": 1,
+          "focus": "Introduction to Next.js",
+          "tasks": [
+            "Watch official Next.js tutorial",
+            "Set up development environment",
+            "Create first basic Next.js app"
+          ],
+          "estimated_time_hours": 3
+        },
+        {
+          "day": 2,
+          "focus": "Pages and Routing",
+          "tasks": [
+            "Learn about pages directory",
+            "Understand dynamic routing",
+            "Create multi-page app"
+          ],
+          "estimated_time_hours": 3
+        },
+        {
+          "day": 3,
+          "focus": "Data Fetching",
+          "tasks": [
+            "Study getStaticProps and getServerSideProps",
+            "Implement data fetching in pages",
+            "Create API routes"
+          ],
+          "estimated_time_hours": 3
+        },
+        {
+          "day": 4,
+          "focus": "Styling and CSS",
+          "tasks": [
+            "Learn about CSS modules",
+            "Explore styled-jsx",
+            "Apply styling to your app"
+          ],
+          "estimated_time_hours": 3
+        },
+        {
+          "day": 5,
+          "focus": "Deployment and Optimization",
+          "tasks": [
+            "Research deployment options",
+            "Learn about Image Optimization",
+            "Deploy your app"
+          ],
+          "estimated_time_hours": 3
+        },
+        {
+          "day": 6,
+          "focus": "Advanced Concepts",
+          "tasks": [
+            "Explore middleware",
+            "Learn about authentication",
+            "Study performance optimization"
+          ],
+          "estimated_time_hours": 3
+        },
+        {
+          "day": 7,
+          "focus": "Project Work",
+          "tasks": [
+            "Start building a small project",
+            "Apply all learned concepts",
+            "Troubleshoot issues"
+          ],
+          "estimated_time_hours": 4
+        }
+      ],
+      "potential_obstacles": [
+        "Time constraints",
+        "Complex concepts",
+        "Technical issues",
+        "Lack of project ideas"
+      ],
+      "success_metrics": [
+        "Complete all daily tasks",
+        "Build a functional Next.js app",
+        "Understand core concepts"
+      ],
+      "final_recommendation": "Learning Next.js in 7 days is extremely ambitious and may not lead to deep understanding. Consider extending the timeline to 3-4 weeks for a more thorough grasp of the framework. Focus on building practical projects rather than just following tutorials."
+    },
+    "status": "active",
+    "id": "1776429514873",
+    "createdAt": "2026-04-17T12:38:34.873Z"
+  }
+]
